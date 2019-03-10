@@ -20,6 +20,7 @@ def main1():
     T2 = threading.Thread(target=T2_job,name='T2')
     T1.start()
     T2.start()
+    print('all done!')
     
 def main2():
     print(threading.active_count())
@@ -31,8 +32,9 @@ def main2():
     T1.start()
     T2.start()
     T1.join()
-    
+    print('all done!')
     
 if __name__=='__main__':
     main1()	
+    time.sleep(5)
     main2()
